@@ -106,8 +106,8 @@
     color: black;
     display: block;
     text-align: right; /* Alinha o número à direita */
-    opacity: .3; /* Menos opacidade */
-    font-size: .9rem; /* Diminuir o tamanho da fonte */
+    opacity: .2; /* Menos opacidade */
+    font-size: .7rem; /* Diminuir o tamanho da fonte */
     margin-top: 0.25rem; /* Reduzir o espaçamento entre o número e os outros elementos */
 }
 
