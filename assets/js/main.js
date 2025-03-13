@@ -8,33 +8,27 @@ let offset = 0
 
 
 
-function loadPokemons (offset, limit) {
+function loadPokemons(offset, limit) {
     pokeAPI.getPokemons(offset, limit).then((pokemons = []) => {
         const newHTML = pokemons.map((pokemon) => `
-        <li class="pockemon ${pokemon.type} ">
-    
-                    <span class="number">#${pokemon.number}</span>
-                    <span class="name">${pokemon.name}</span>
-    
-                    <div class="detail">
-                        
-                    <ol class="types">
-                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                    </ol>
-    
-    
-                        <img src="${pokemon.photo}"
-                            alt="${pokemon.name}">
-    
-    
-                    </div>
-                </li>
-        
-        ` ).join('')
-        pokemonList.innerHTML += newHTML
-
-    })
+        <li class="pokemon ${pokemon.type}">
+            <a href="pokemon.html?id=${pokemon.name}"> <!-- Link para a página de detalhes -->
+                <span class="number">#${pokemon.number}</span>
+                <span class="name">${pokemon.name}</span>
+            </a>
+            <div class="detail">
+                <ol class="types">
+                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                </ol>
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
+            </div>
+        </li>
+        `).join('');
+        pokemonList.innerHTML += newHTML;
+    });
 }
+
+
 
 loadPokemons(offset, limit)
 

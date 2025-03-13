@@ -8,6 +8,7 @@
     gap: 0.5rem; /* Diminuir o espaçamento entre os itens */
     border-radius: 16px; /* Bordas arredondadas do contêiner principal */
     background-color: #f8f8f8; /* Cor de fundo mais suave */
+    
 }
 
 /* Estilo de fundo para cada tipo de Pokémon */
